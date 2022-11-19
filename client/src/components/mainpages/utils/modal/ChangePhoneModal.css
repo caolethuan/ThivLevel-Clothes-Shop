@@ -1,0 +1,76 @@
+.phone-change-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.phone-change-modal .form-change-phone{
+    width: 500px;
+    position: relative;
+    background: #fff;
+    animation: zoomOut ease .3s;
+    border-radius: 10px;
+}
+
+.phone-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    cursor: pointer;
+    font-size: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    padding: 1px;
+}
+
+.form-change-phone-wrapper .change-phone-number-field{
+    margin: 30px 15px 15px 15px;
+}
+
+.form-change-phone-wrapper .change-phone-number-field label {
+    text-transform: uppercase;
+}
+
+.form-change-phone-wrapper .change-phone-number-field input  {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.btn-ctrl-modal {
+    text-align: end;
+    margin: 15px 0;
+}
+
+.btn-ctrl-modal button{
+    margin: 5px 15px;
+    color: #ffff;
+    width: 100px;
+    font-size: 15px;
+    height: 35px;
+}
+
+.btn-ctrl-modal .cancel-change-phone-modal-btn{
+    background-color: #4c4747;
+}
+
+.btn-ctrl-modal .save-change-phone-modal-btn{
+    background-color: crimson;
+}
+
+.phone-number-profile-input{
+    display: flex;
+    align-items: center;
+}
+
+.phone-number-profile-input span {
+    display: inline;
+    font-size: 20px;
+    padding-right: 10px;
+    color: #4c4747;
+}

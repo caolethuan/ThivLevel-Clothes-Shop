@@ -1,0 +1,36 @@
+.pagination{
+    margin-top: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    font-size: 16px;
+    gap: 5px;
+}
+.pagination .next, .pagination .previous {
+    padding: 0 15px;
+}
+.pagination .page-num, .pagination .next a{
+    padding: 8px 15px;
+    cursor: pointer;
+    border: 1px #000 solid;
+    font-weight: 400;
+}
+
+.pagination .page-num:hover, .pagination .next a:hover{
+    background-color: #ee4d2d;
+    color: #fff;
+}
+
+.pagination .active .page-num{
+    background-color: #ee4d2d;
+}
+
+td.method-payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+

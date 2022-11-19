@@ -1,0 +1,176 @@
+.products__container {
+}
+
+.products__container .products__category {
+    margin-top: 20px;
+}
+
+.products__container .products__category-heading {
+    text-transform: uppercase;
+    color: #246284;
+    border-bottom: 3px solid;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+.products__container .products__category ul li{
+    margin: 20px 0;
+}
+
+.products__container .products__category ul li a{
+    display: block;
+    min-width: 50%;
+    padding: 5px;
+    font-size: 20px;
+    color: #45748f;
+    transition: transform .2s linear;
+}
+
+.products__container .products__category ul li a:hover {
+    transform: translateX(10px);
+}
+
+.products {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.products .no-results {
+    color: #246284;
+}
+
+/* Product item */
+@import url("../utils/productItem/productItem.css");
+
+.delete-all {
+    text-align: right;
+    margin: 20px;
+}
+
+.delete-all input {
+    height: 25px;
+    width: 25px;
+    transform: translateY(5px);
+    margin: 0 15px;
+}
+
+.delete-all span {
+    text-transform: uppercase;
+    color: rgb(3,165,206);
+    letter-spacing: 1.3px;
+}
+
+.delete-all button {
+    border: 1px solid crimson;
+    padding: 10px 25px;
+    color: crimson;
+    text-transform: uppercase;
+}
+
+/* Filters */
+.filter_menu.product {
+    
+}
+
+.filter_menu {
+    min-height: 40px;
+    background-color: rgb(69, 116, 143);
+    color: #008c90;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.admin .filter_menu {
+    background: #fff;
+}
+
+.filter_menu select, 
+.filter_menu input {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.filter_menu .tool-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.filter_menu input {
+    flex: 1;
+}
+
+.filter_menu .search {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.filter_menu .search .search-btn {
+    color: #45748f;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.filter_menu .search .result-list{
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    background: #fff;
+    right: 0;
+    left: 0;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.filter_menu .search .result-list .result-item{
+    margin: 5px 0;
+}
+
+.filter_menu .search .result-list .result-item a{
+    display: block;
+    padding: 10px;
+    color: #333;
+    transition: background .1s linear;
+}
+
+.filter_menu .search .result-list .result-item a:hover{
+    background: #eee;
+}
+
+
+.filter_menu .filter,
+.filter_menu .sort {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.filter_menu .filter span,
+.filter_menu .sort span{
+    display: block;
+    margin: 0 10px;
+    color: #fff;
+}
+
+/* Load more */
+.load_more {
+    text-align: center;
+}
+
+.load_more button {
+    padding: 0 25px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    text-transform: capitalize;
+}

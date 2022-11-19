@@ -1,0 +1,307 @@
+.cart-wrapper {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cart-wrapper .list-cart {
+    width: 100%;
+}
+
+.detail.cart {
+    display: flex;
+    position: relative;
+}
+
+.detail.cart .delete {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    right: 0;
+    padding: 5px 15px;
+    color: #fff;
+    background: #303030;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background .2s linear;
+}
+
+.detail.cart .delete:hover {
+    background: crimson;
+}
+
+.detail.cart .unvailible-layer {
+    user-select: none;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.detail.cart .unvailible-layer span {
+    display: block;
+    width: fit-content;
+    font-weight: 500;
+    padding: 5px 10px;
+    color: crimson;
+    background: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+}
+
+.cart {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transform: scaleY(0.98);
+}
+
+.cart-heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    background-color: #eee;
+    color: #555;
+    padding: 10px 0;
+}
+
+.product-in-stock {
+    text-align: right;
+    color: brown;
+}
+
+.amount {
+    padding: 10px 0;
+}
+
+.amount span {
+    color: crimson;
+    padding: 0 20px;
+}
+
+.amount button {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #777;
+}
+
+.payment {
+    height: fit-content;
+    padding: 20px;
+    background: #f1f1f1;
+}
+
+.payment p {
+    font-weight: 700;
+}
+
+.payment .total,
+.payment-total,
+.discount-cost,
+.ship-cost,
+.grand-total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ship-cost {
+    padding-bottom: 15px;
+}
+
+.total {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total h3 {
+    color: crimson;
+}
+
+.product-images img {
+    width: 150px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.box-detail {
+    flex: 1;
+    margin-left: 30px;
+}
+
+.box-detail h2 {
+    font-size: 21px;
+    width: 90%;
+}
+
+.box-detail h3 {
+    color: crimson;
+    font-size: 16px;
+}
+
+.box-detail .product-color {
+    display: flex;
+    align-items: center;
+}
+
+.box-detail .product-color button {
+    margin-left: 10px;
+}
+
+.amount {
+    text-align: right
+}
+
+.payment .divider {
+    width: 100%;
+    margin: 15px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.payment .payment-method {}
+
+.payment .payment-buy-btn {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: rgb(141, 213, 254);
+    padding: 15px 0;
+    transition: all .2s linear;
+}
+
+.payment .payment-buy-btn:hover {
+    color: #fff;
+    background-color: #066eba;
+}
+
+.payment .to-payment-page {
+    display: none;
+}
+
+/* payment modal */
+
+.payment-modal {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.payment-modal>.wrapper {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    margin: 0 20px;
+}
+
+.payment-modal>.wrapper .payment-header {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #333;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.payment-modal>.wrapper .payment-detail {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+}
+
+.payment-modal>.wrapper .list-cart {
+    margin-right: 20px;
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.payment-modal .payment-total-wrapper {
+    background: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.payment-modal>.wrapper h2 {
+    font-size: 16px;
+}
+
+.payment-modal>.wrapper .box-detail {
+    margin: 0;
+}
+
+.payment-modal>.wrapper .item-amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-modal>.wrapper .item-amount span {
+    display: block;
+    color: crimson;
+    font-weight: 500;
+    margin: 5px 50px 0 0;
+}
+
+.payment-modal .payment-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 30px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 2px;
+    display: flex;
+    cursor: pointer;
+}
+
+.payment-modal-container {
+    display: none;
+}
+
+.payment-modal-container.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .payment-modal>.wrapper .payment-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-heading {
+        font-size: 2rem;
+    }
+
+    .detail.cart {
+        display: block;
+    }
+
+    .box-detail {
+        margin-left: unset;
+    }
+
+    .box-detail h2 {
+        width: 100%;
+    }
+
+    .payment-modal>.wrapper .list-cart {
+        height: 325px;
+    }
+
+    .payment-modal .payment-total-wrapper {
+        margin-top: 15px;
+    }
+}
+
+/* COD methods modal */
+@import url('../utils/modal/codModal.css');

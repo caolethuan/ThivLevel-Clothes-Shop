@@ -1,0 +1,354 @@
+/* Chart css */
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 30px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 30px;
+}
+
+.mg-l-r-15 {
+    margin: 0 15px;
+}
+
+.chart .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.content-header {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    padding: 15px 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    border-bottom: coral 2px solid;
+}
+
+.content-wrapper {
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.card-total {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 10px;
+    padding: 18px 25px;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    margin-bottom: 15px;
+}
+
+.card-total .icon-bg {
+    width: 48px;
+    height: 48px;
+    line-height: 48px!important;
+    font-size: 20px;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 10px;
+    border-radius: 50%!important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.primary-bg {
+    color: #084298;
+    background-color: #cfe2ff;
+    border-color: #b6d4fe;
+}
+
+.success-bg{
+    color: #0f5132; 
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}
+
+.warning-bg{
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+}
+
+
+.card-chart{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 10px;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+    margin-top: 15px;
+}
+
+
+.cart-title{
+    padding: 15px;
+    background-color: firebrick;
+    color: #fff;
+}
+
+.card-chart iframe {
+    border: none;
+}
+
+
+/* User Mangager css */
+.search-user{
+    padding: 20px 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+}
+
+.search-user-input {
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    outline: none;
+    height: 40px;
+    width: 100%;
+}
+
+
+.user-publish-toggle {
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+    margin: auto;
+    padding: 5px 0 0;
+    font-size: 20px;
+}
+
+.users-list-table {
+    border: 1px solid #ddd;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.users-list .table-header {
+    color: #555;
+    background-color: #f4f5f7;
+}
+
+.users-list .table-header th{
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.users-list .table-body td {
+    border: none;
+    border-bottom: 1px solid #d4e0ed;
+    text-transform: none;
+}
+
+/* .users-list .table-body tr:nth-child(even) {
+    background-color: #eee;
+} */
+
+.users-list .table-body .sold-out, 
+.users-list .table-body .selling {
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 10px;
+    display: block;
+    font-size: 14px;
+}
+
+.users-list .table-body .sold-out {
+    background: crimson;
+}
+
+.users-list .table-body .selling {
+    background: #0e9f6e;
+}
+
+.users-list .table-body .user-view-detail {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-body .user-id {
+    color: #24262d;
+    font-weight: 600;
+    text-align: left;
+}
+
+.table-body .user-name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.table-body .user-price{
+    font-weight: 600;
+}
+
+.table-body .user-name img {
+    width: 35px;
+    height: 35px;
+    display: block;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.table-body .user-name span {
+    display: block;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.table-body .user-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.table-body .user-actions a {
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.user-view-detail-box {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.user-view-detail-box.active {
+    display: block;
+}
+
+.view-detail-user-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.view-detail-user-modal .user-details{
+    width: 500px;
+    position: relative;
+    background: #fff;
+    animation: zoomOut ease .3s;
+    border-radius: 10px;
+}
+
+.view-detail-user-modal .user-details .user-details-wrapper{
+    padding: 35px;
+}
+
+.user-details .user-profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-details .user-profile-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.user-details .user-details-wrapper .user-about-profile p {
+    font-size: 20px;
+    color:#24262d;
+}
+
+.user-details .user-details-wrapper .user-about-profile span {
+    color: #555;
+}
+
+.user-details .user-details-wrapper .user-details-card {
+    margin: 15px 0;
+}
+
+.user-details-card .user-details-field {
+    padding-bottom: 15px;
+}
+
+.user-details-card .user-details-field {
+    display: flex;
+    width: 100%;
+}    
+
+.user-details-card .user-details-field .user-name-field {
+    font-weight: 600;
+    width: 150px;
+}
+
+.user-details-card .user-details-field .user-text-field {
+    color: #555;
+}
+.user-view-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    cursor: pointer;
+    font-size: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    padding: 1px;
+}
+
+
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1%)
+    } 
+    to {
+        transform: scale(100%)
+    }
+}
+
+/* Staff page css */
+
+.search-user .add-staff-link {
+    background-color: crimson;
+    padding: 15px 30px;
+    border-radius: 10px;
+    color: #fff;
+}

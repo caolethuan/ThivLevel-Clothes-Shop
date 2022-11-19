@@ -1,0 +1,30 @@
+.back-to-top-Btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: fixed;
+    right: 2%;
+    bottom: 13%;
+    cursor: pointer;
+    font-size: 20px;
+    color: #000;
+    box-shadow: 0 0 15px 10px rgb(0 0 0 / 8%);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear .1s;
+}
+
+.back-to-top-Btn:hover {
+    background-color: crimson;
+    color: #fff;
+}
+
+.back-to-top-Btn.active {
+    opacity: 1;
+    visibility: visible;
+}

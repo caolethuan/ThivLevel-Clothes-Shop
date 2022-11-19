@@ -1,0 +1,135 @@
+/* order Mangager css */
+.ctrl-order {
+    padding: 20px 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+.ctrl-order select,
+.ctrl-order input {
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    outline: none;
+    height: 40px;
+}
+
+.search-order-by {
+    width: 100%;
+    max-width: 330px;
+}
+
+.search-order-input {
+    width: 100%;
+}
+
+
+.order-publish-toggle {
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+    margin: auto;
+    padding: 5px 0 0;
+    font-size: 20px;
+}
+
+.orders-list-table {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.orders-list .table-header {
+    color: #555;
+    background-color: #f4f5f7;
+}
+
+.orders-list .table-header th {
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.orders-list .table-body td {
+    border: none;
+    border-bottom: 1px solid #d4e0ed;
+    text-transform: none;
+}
+
+/* .orders-list .table-body tr:nth-child(even) {
+    background-color: #eee;
+} */
+
+.orders-list .table-body .sold-out,
+.orders-list .table-body .selling {
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 10px;
+    display: block;
+    font-size: 14px;
+}
+
+
+.orders-list .table-body .order-view-detail {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-body .order-id {
+    color: #24262d;
+    font-weight: 600;
+    text-align: left;
+}
+
+.table-body .order-name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.table-body .order-price {
+    font-weight: 600;
+}
+
+.table-body .order-name img {
+    width: 35px;
+    height: 35px;
+    display: block;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.table-body .order-name span {
+    display: block;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.table-body .order-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.table-body .order-actions a {
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.table-body .method-span {
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    color: #fff;
+}

@@ -1,0 +1,56 @@
+.service-container {
+    padding: 35px 0;
+}
+
+.service-container .service-item {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px #ccc;
+    padding: 15px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .1s linear;
+    margin-top: 10px;
+}
+
+.service-container .service-item:hover {
+    transform: translateY(-7px);
+}
+
+.service-container .service-item:hover .service-heading {
+    color: #246184;
+}
+
+.service-item .service-icon {
+    padding: 0 10px;
+    margin-right: 5px;
+}
+
+.service-content .service-heading {
+    color: #333;
+}
+
+.service-content .service-des {
+    --height: 16px;
+    font-size: var(--height);
+    /* min-height: 45px; */
+    display: flex;
+    align-items: center;
+    color: #888;
+    padding-top: 5px;
+}
+
+/* best seller */
+.best-seller-container .best-seller__heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #246284;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    background: #e1f4fc;
+    width: 100%;
+    justify-content: center;
+}

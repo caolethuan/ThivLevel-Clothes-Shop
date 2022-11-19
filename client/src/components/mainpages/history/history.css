@@ -1,0 +1,242 @@
+.history-page {
+    overflow-x: auto;
+}
+
+.history-page h2, 
+.history-page h4 {
+    text-align: center;
+    margin: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.history-page table {
+    width: 100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    border: 0.5px solid #d5d6d7;
+}
+
+.history-page table thead {
+    background-color: #f4f5f7;
+}
+
+.history-page table thead th {
+    box-sizing: border-box;
+    border: 0 solid #d5d6d7;
+}
+
+.history-page table tbody td {
+    border: none;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+
+.history-page img {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.order-infor-container {
+    margin-top: 30px;
+    background: #d9f1ff;
+}
+
+.order-infor-container .order-infor {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin: 20px 20px;
+}
+
+.order-infor .infor span {
+    display: block;
+}
+
+.order-infor .thumbnail {
+    min-width: 48px;
+    height: 48px;
+    background-color: #b1d6e7;
+    color: #187095;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.order-detail {
+    margin: 30px 0;
+}
+
+.order-detail table{
+    margin: unset;
+    width: unset;
+    flex: 1;
+    margin-right: 20px;
+    height: 100%;
+}
+
+.order-detail .pay-infor {
+    padding: 15px;
+    background-color: #f4f5f7;
+    border-radius: 5px;  
+    border: 1px solid #ccc;
+    line-height: 30px;
+}
+
+.pay-infor .divider {
+    width: 100%;
+    margin-top: 5px;
+    border-top: 2px dashed #ccc;
+}
+
+.pay-infor .item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.pay-infor .item.fw600 {
+    font-weight: 600;
+}
+
+.size-color-td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: none;
+}
+
+.size-color-td>div {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.history-page td .pending {
+    color: #0f85ff;
+}
+
+.history-page td .processing {
+    color: #0f38ff;
+}
+
+.history-page td .shipping {
+    color: #ff680f;
+}
+
+.history-page td .delivered {
+    color: #0bc354;
+}
+
+.history-page td .cancel {
+    color: #c3350b;
+}
+
+.history-page td a {
+    color: #0f85ff;
+}
+
+.order-filter-client-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.order-filter-client-wrapper input,
+.order-filter-client-wrapper select {
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    outline: none;
+    height: 40px;
+}
+
+.order-filter-client-wrapper .order-search-client{
+    width: 100%;
+    max-width: 330px;
+    display: flex;
+    align-items: center;
+}
+
+.order-filter-client-wrapper .order-status-client,
+.order-filter-client-wrapper .order-sortdate-client {
+    display: flex;
+    align-items: center;
+}
+
+.pay-infor-wrapper .cancel-order {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.pay-infor-wrapper .cancel-order button{
+    background-color: crimson;
+    border: 1px solid crimson;
+    color: #fff;
+    height: 45px;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.pay-infor-wrapper .cancel-order button:hover {
+    color: crimson;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+/* pagination css */
+.pagination{
+    margin-top: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    font-size: 16px;
+    gap: 5px;
+}
+.pagination .next, .pagination .previous {
+    padding: 0 15px;
+}
+.pagination .page-num, .pagination .next a{
+    padding: 8px 15px;
+    cursor: pointer;
+    border: 1px #000 solid;
+    font-weight: 400;
+}
+
+.pagination .page-num:hover, .pagination .next a:hover{
+    background-color: #ee4d2d;
+    color: #fff;
+}
+
+.pagination .active .page-num{
+    background-color: #ee4d2d;
+}
+
+td.method-payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .order-detail .pay-infor {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,48 @@
+.categories {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.categories form {
+    width: 290px;
+    margin-bottom: 20px;
+}
+
+.categories label {
+    display: block;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.categories input,
+.categories button {
+    height: 35px;
+    outline: none;
+}
+
+.categories input {
+    width: 210px;
+}
+
+.categories button {
+    width: 70px;
+    background: #0e9f6e;
+    color: white;
+    margin-left: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.categories .row {
+    min-width: 290px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}

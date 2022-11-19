@@ -1,0 +1,80 @@
+:root {
+    --text-color: #323232;
+    --header-text: #246284;
+}
+
+.about-container {
+    padding-top: 30px;
+}
+
+.about-container .page-wrapper{
+    min-height: 100vh;
+}
+
+.about-container .group-menu {
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+.about-container .group-menu .heading {
+    font-size: 18px;
+    color: var(--header-text);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+}
+
+.about-container .group-menu .page-items li {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.about-container .group-menu .page-items li a {
+    color: var(--text-color); 
+    transition: color .2s linear;
+}
+
+.about-container .group-menu .page-items li a:hover {
+    color: var(--header-text);
+}
+
+.about-container .page-wrapper .heading {
+    color: var(--header-text);
+    margin-bottom: 20px;
+}
+
+.about-container .page-wrapper img {
+    width: 100%;
+}
+
+.about-container .page-wrapper .content {
+    font-size: 18px;
+    padding: 15px 0;
+    color: #45748f;
+}
+
+.about-container .page-wrapper .content .term .term_heading {
+    margin-bottom: 15px;
+}
+
+.about-container .page-wrapper .content .term .term_heading, 
+.about-container .page-wrapper .content .term p {
+    font-size: 18px;
+}
+
+.about-container .page-wrapper .content .note h4{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.about-container .page-wrapper .content .brand-name {
+    font-weight: 600;
+}
+
+.about-container .page-wrapper .content .term .method {
+    font-weight: 600;
+    border-bottom: 2px solid #ccc;
+}

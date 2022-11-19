@@ -1,0 +1,67 @@
+.view-detail-product-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.view-detail-product-modal .product-details{
+    width: 800px;
+    position: relative;
+    animation: zoomOut ease .3s;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    gap: 30px;
+}
+
+.view-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    cursor: pointer;
+    font-size: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    padding: 1px;
+}
+
+.view-detail-product-modal.quickview .cart-btns .view-detail {
+    display: block;
+    padding: 10px;
+    color: darkcyan;
+}
+
+.rating span svg {
+    color: rgb(255, 206, 61) !important;
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1%)
+    } 
+    to {
+        transform: scale(100%)
+    }
+}
+
+@media (max-width: 768px) {
+    .view-detail-product-modal.quickview .product-details {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: unset;
+        height: 500px;
+        overflow-y: scroll;
+    }
+
+    .view-detail-product-modal.quickview {
+        margin: 0 20px;
+    }
+
+    .view-close {
+        top: 0px !important;
+        right: 0px !important;
+        
+    }
+}

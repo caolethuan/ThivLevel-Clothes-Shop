@@ -1,0 +1,76 @@
+.login-page {
+    max-width: 500px;
+    border: 2px solid rgb(3, 165, 206);
+    border-radius: 5px;
+    padding: 30px;
+    margin: 50px auto;
+}
+
+.login-page .form-signin-signout .sendmail-status {
+    color: crimson;
+}
+
+.login-page h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+}
+
+.login-page form input,
+.login-page form button {
+    width: 100%;
+    padding: 0 5px;
+    outline: rgb(3, 165, 206);
+    /* border: 1px solid rgb(3, 165, 206); */
+}
+
+.login-page form .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.login-page form button {
+    width: 150px;
+    height: 40px;
+    background: rgb(3, 165, 206);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 3px;
+}
+
+.login-page form span{
+    font-size: 14px;
+}
+
+.login-page form span a {
+    color: orange;
+    letter-spacing: 1.3px;
+}
+
+.form-signin-signout label {
+    color: #555;
+    margin: 10px 0 5px;
+    display: block;
+}
+
+.form-signin-signout input {
+    background: #f7f7f7;
+    border: 1px solid #ccc;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.signin-with-social {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.signin-with-social span {
+    color: #a1a1a1;
+    display: block;
+    margin-bottom: 10px;
+}

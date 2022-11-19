@@ -1,0 +1,8 @@
+.slider-container {
+    margin-bottom: 35px;
+}
+
+.slider-img img {
+    width: 100%;
+    max-height: 550px;
+}

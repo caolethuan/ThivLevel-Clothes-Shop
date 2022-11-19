@@ -1,0 +1,9 @@
+/* overview css */
+@import url('../mainpages/overview/overview.css');
+/* product list */
+@import url("../mainpages/products/productsList.css"); 
+/* order list */
+@import url('../mainpages/listorders/ListOrders.css');
+
+/* oder detail */
+@import url('../mainpages/listorders/DetailOrderAdmin.css');

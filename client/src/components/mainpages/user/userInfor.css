@@ -1,0 +1,186 @@
+.admin .user-profile-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.user-header {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.header-title {
+    text-transform: capitalize;
+    color: #333;
+    font-size: 2rem;
+}
+
+.header-description {}
+
+.profile-container {}
+
+.profile-container .divider {
+    height: auto;
+    border-right: 2px solid #efefef;
+    width: 2px;
+    margin-bottom: 20px;
+}
+
+.profile-user-avt {
+    text-align: center;
+    padding: 0 50px;
+    margin-bottom: 20px;
+}
+
+.profile-user-avt .select-img {
+    padding: 5px 10px;
+    background: #eee;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.profile-user-avt input {
+    display: none;
+}
+
+.profile-user-avt img {
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border-radius: 50%;
+    display: block;
+}
+
+.profile-user-avt span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+.user-infor-wrapper {
+    flex: 1;
+}
+
+.user-infor-wrapper form .user-infor-field {
+    display: flex;
+    align-items: baseline;
+}
+
+.user-infor-wrapper form .user-infor-field label {
+    text-align: right;
+    width: 20%;
+    margin-right: 30px;
+    display: block;
+}
+
+.user-infor-wrapper form .user-infor-field input {
+    font-size: 16px;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+
+.user-infor-wrapper form .save-btn {
+    height: 40px;
+    width: fit-content;
+    padding: 0 10px;
+    background-color: crimson;
+    border-radius: 3px;
+    color: white;
+    margin: 20px;
+}
+
+.user-infor-field {
+    margin-bottom: 30px;
+}
+
+.user-infor-field .change-address {
+    display: block;
+    margin-top: 5px;
+}
+
+.user-infor-field .change-address:link,
+.user-infor-field .change-address:visited,
+.user-infor-field .phone-number-verify:link,
+.user-infor-field .phone-number-verify:visited {
+    color: blue;
+}
+
+.user-infor-field .change-address svg {
+    padding-right: 5px;
+}
+
+.user-infor-field #user-gender {
+    display: flex;
+}
+
+.user-infor-field #user-gender .user-gender-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-infor-field #user-gender .user-gender-item input {
+    margin-right: 5px;
+    height: 16px;
+}
+
+.change-password {}
+
+.change-password-wrapper .change-password-heading {
+    margin-bottom: 20px;
+}
+
+.change-password-wrapper .password-input-item {
+    margin-bottom: 10px;
+}
+
+.change-password-wrapper .password-input-item label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.change-password-wrapper .password-input-item input {
+    font-size: 16px;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+
+.change-password-wrapper .change-password-btn {
+    height: 40px;
+    width: fit-content;
+    padding: 0 10px;
+    background-color: crimson;
+    border-radius: 3px;
+    color: white;
+    margin: 20px 0;
+}
+
+/* Change phone order modal css */
+.update-phone-profile-box, .verify-phone-profile-box {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.update-phone-profile-box.active, .verify-phone-profile-box.active {
+    display: block;
+}
+
+
+
+@import url('../utils/modal/ChangePhoneModal.css');
+
+@media (max-width: 739px) {
+    .profile-container .divider {
+        display: none;
+    }
+}

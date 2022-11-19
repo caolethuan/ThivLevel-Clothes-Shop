@@ -1,0 +1,152 @@
+.content-body{
+    background-color: #fff;
+    margin: 15px;
+    border-radius: 15px;
+    color: #555
+}
+
+.order-detail-wrapper {
+    padding: 15px;
+}
+
+.order-detail-wrapper .order-detail-header, .order-detail-body, .payment-detail-order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #d5d6d7;
+}
+
+.order-detail-wrapper .order-detail-header h1 {
+    font-size: 20px;
+}
+
+.order-detail-wrapper .order-id-status p, .order-detail-wrapper .payment-detail-order p {
+    font-weight: 600;
+    color: #888;
+}
+
+.order-detail-wrapper .order-id-status p span {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.order-detail-header select, 
+.order-detail-header input {
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    outline: none;
+    height: 40px;
+
+}
+.order-detail-header .save-status {
+    background-color: #f05252;
+    border: 1px solid #f05252;
+    color: #fff;
+    height: 40px;
+    width: 55px;
+    cursor: pointer;
+}
+
+.order-detail-header .save-status:hover {
+    background-color: #fff;
+    color: #f05252
+}
+
+.order-detail-wrapper .order-name-address {
+    text-align: end;
+    width: 300px;
+}
+
+.order-detail-wrapper .order-detail-body{
+    padding: 35px 0;
+    background-color: #f9fafb;
+}
+
+.order-detail-wrapper label{
+    font-weight: 600;
+
+}
+
+.order-detail-wrapper .list-product-order{
+    margin-top: 25px;
+}
+
+.order-detail-wrapper .list-product-order .oder-product-list-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-detail-wrapper .list-product-order .oder-product-list-table thead{
+    background-color: #f4f5f7;
+}
+.order-detail-wrapper .list-product-order .oder-product-list-table thead th {
+    box-sizing: border-box;
+    border: 0 solid #d5d6d7;
+}
+
+.order-detail-wrapper .list-product-order .oder-product-list-table tbody td {
+    border: none;
+}
+
+.table-product-column {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.table-thumbnail-product {
+    width: 35px;
+    height: 35px;
+    display: block;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.oder-product-list-table tbody .table-quantity,
+.oder-product-list-table tbody .table-item-price{
+    color: #24262d;
+    font-weight: 600;
+}
+
+.oder-product-list-table tbody .table-amount {
+    color: #f05252;
+    font-weight: 600;
+}
+
+.order-detail-wrapper .payment-detail-order{
+    margin: 25px 0;
+    padding: 15px;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    background-color: #f9fafb;
+}
+
+.order-detail-wrapper .payment-detail-order .total-amount p {
+    color: #f05252;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.text-start{
+    text-align: start;
+}
+
+/* Change phone order modal css */
+.order-phone-change-box {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.order-phone-change-box.active {
+    display: block;
+}
+
+@import url('../utils/modal/ChangePhoneModal.css');
