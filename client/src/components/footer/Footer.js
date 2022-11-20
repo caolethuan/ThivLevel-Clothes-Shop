@@ -12,7 +12,7 @@ function Footer() {
         <footer className="footer res-row">
             <div className="col l-10 l-o-1 m-10 m-o-1 c-12">
                 <div className="res-row">
-                    <div className="col l-3 m-3 c-6 footer-item">
+                    <div className="col l-3 m-3 c-12 footer-item">
                         <div className="footer-logo">
                             <img src={Logo} alt="" />
                             <ul>
