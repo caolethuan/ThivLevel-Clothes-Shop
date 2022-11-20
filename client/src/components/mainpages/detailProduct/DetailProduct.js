@@ -202,7 +202,7 @@ function DetailProduct() {
                                 <p className="small-desc">{detailProduct.description}</p>
 
                                 <div className="product-options">
-                                    <span>Colors: </span>
+                                    <span>Màu sắc: </span>
                                     {
                                         detailProduct.colors.map((color, index) => (
                                             <div key={color}>
@@ -241,7 +241,7 @@ function DetailProduct() {
                                 </div>
 
                                 <div className="quantity-btn">
-                                    <span>Quantity: </span>
+                                    <span>Số lượng: </span>
                                     <button onClick={() => quantity === 1 ? setQuantity(1) : setQuantity(quantity - 1)}>-</button>
                                     <span>{quantity}</span>
                                     <button onClick={() => setQuantity(quantity + 1)}>+</button>
@@ -252,7 +252,7 @@ function DetailProduct() {
                                         detailProduct.countInStock > 0 ?
                                             <Link to="#!" className="add-cart"
                                                 onClick={() => handleAddCart(detailProduct, color, size, quantity)}
-                                            >Add to cart</Link> : <span>Out of stock</span>
+                                            >Thêm vào giỏ hàng</Link> : <span>Hết hàng</span>
                                     }
                                 </div>
                             </div>
@@ -269,17 +269,17 @@ function DetailProduct() {
             </section>
             <div className='review-section'>
                 <div className='Reviews'>
-                    <h2 className='tag-color'>Reviews <span style={{ fontSize: 20, fontWeight: 700 }}>({reviews.length})</span></h2>
+                    <h2 className='tag-color'>Đánh giá <span style={{ fontSize: 20, fontWeight: 700 }}>({reviews.length})</span></h2>
                     <div className="row" >
-                        <span>Sort: </span>
+                        <span>Sắp xếp: </span>
                         <select value={reverse} onChange={e => sortReview(e.target.value)}>
-                            <option value={true}>Oldest</option>
-                            <option value={false}>Newest</option>
+                            <option value={true}>Cũ nhất</option>
+                            <option value={false}>Mới nhất</option>
                         </select>
                     </div>
                     {
                         reviews.length === 0 && (
-                            <p>No Reviews</p>
+                            <p>Không có đánh giá</p>
                         )
                     }
                     <ReviewItem data={reviews} />
@@ -288,7 +288,7 @@ function DetailProduct() {
 
                     <form className="form" onSubmit={submitReviewHandler}>
                         <div>
-                            <h2 className='tag-name' style={{ marginTop: '20px' }}>Write a customer review</h2>
+                            <h2 className='tag-name' style={{ marginTop: '20px' }}>Đánh giá của bạn</h2>
                         </div>
                         <div className="rating-wrapper">
                             <div className='rating-star'>
@@ -326,14 +326,14 @@ function DetailProduct() {
                                     id="comment"
                                     value={comment}
                                     onChange={(e) => setComment(e.target.value)}
-                                    placeholder="Enter your review..."
+                                    placeholder="Viết đánh giá ở đây..."
                                     required
                                 ></textarea>
                             </div>
 
                             <div className='send'>
                                 <button className={comment ? "primary active" : "primary"} type="submit">
-                                    Submit
+                                    Gửi
                                 </button>
                             </div>
 
@@ -341,11 +341,11 @@ function DetailProduct() {
 
                     </form>
 
-                ) : (<h4 className='sign-in-msg'>Please <Link to='/login' style={{ color: 'crimson' }}
-                >sign in</Link> to write a review</h4>)}
+                ) : (<h4 className='sign-in-msg'><Link to='/login' style={{ color: 'crimson' }}
+                >Đăng nhập</Link> để viết đánh giá nhé!</h4>)}
             </div>
             <div className="related-products">
-                <h2 className='tag-color'>Related products</h2>
+                <h2 className='tag-color'>Sản phẩm liên quan</h2>
                 <div className="products relate-products-list res-row">
                     {
                         products.map((product) => {

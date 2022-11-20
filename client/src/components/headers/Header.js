@@ -124,7 +124,6 @@ function Header() {
                 {
                     isLogged ?
                         <div className="user__wrapper">
-                            <div className="user__name">Hi, {user.username}</div>
                             <img src={user.imageProfile?.url ?? Unknow} alt="" />
                         </div>
                     : null

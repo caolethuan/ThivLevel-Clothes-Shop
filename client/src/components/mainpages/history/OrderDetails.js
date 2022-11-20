@@ -121,7 +121,7 @@ function OrderDetails() {
 
                             <div className="item fw600">
                                 <div>Mã đơn</div>
-                                <div style={{ textTransform: 'uppercase' }}>{orderDetails._id}</div>
+                                <div style={{ textTransform: 'uppercase', wordBreak: 'break-word' }}>{orderDetails._id}</div>
                             </div>
                             <div className="item fw600">
                                 <div>Ngày đặt</div>

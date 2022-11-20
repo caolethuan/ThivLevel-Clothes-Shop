@@ -18,7 +18,7 @@ header {
 
 header .logo {
     flex: 1;
-    margin-left: 50px;
+    margin-left: 10px;
 }
 
 .logo .header-logo {
@@ -93,6 +93,7 @@ header .navbar-tablet-mobile-wrapper {
     background: #fff;
     z-index: 10;
     width: 300px;
+    max-width: 90%;
     transform: translateX(100%);
     opacity: 0;
     transition: transform ease-out .2s, opacity ease-out .2s;

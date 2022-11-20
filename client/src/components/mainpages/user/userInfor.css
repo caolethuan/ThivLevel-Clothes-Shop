@@ -80,6 +80,8 @@
     padding: 5px;
     border: 2px solid #ccc;
     border-radius: 3px;
+    width: 100%;
+    flex: 0.8;
 }
 
 .user-infor-wrapper form .save-btn {
@@ -89,11 +91,19 @@
     background-color: crimson;
     border-radius: 3px;
     color: white;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .user-infor-field {
     margin-bottom: 30px;
+}
+
+.user-infor-field #user-id {
+    word-break: break-word;
+}
+
+.user-infor-field #user-address {
+    flex: 0.8;
 }
 
 .user-infor-field .change-address {
@@ -114,6 +124,7 @@
 
 .user-infor-field #user-gender {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .user-infor-field #user-gender .user-gender-item {

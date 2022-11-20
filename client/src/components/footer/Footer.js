@@ -7,7 +7,7 @@ import { GlobalState } from '../../GlobalState'
 function Footer() {
     const state = useContext(GlobalState)
     const [categories] = state.categoriesAPI.categories
-    
+
     return (
         <footer className="footer res-row">
             <div className="col l-10 l-o-1 m-10 m-o-1 c-12">
@@ -19,7 +19,7 @@ function Footer() {
                                 <li>
                                     <AiIcons.AiFillMail />
                                     <span>
-                                        thivlevel@gmail.com
+                                        vtclothes.shop@gmail.com
                                     </span>
                                 </li>
                                 <li>
@@ -42,7 +42,7 @@ function Footer() {
                             <h3 className="footer-item-header">Mạng xã hội</h3>
                             <ul>
                                 <li>
-                                    <a href="#!">
+                                    <a href="https://www.facebook.com/profile.php?id=100088054956329" target="_blank">
                                         <AiIcons.AiFillFacebook />
                                         <span>
                                             Fanpage ThiV Level

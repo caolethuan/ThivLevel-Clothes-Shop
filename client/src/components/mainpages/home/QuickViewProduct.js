@@ -140,7 +140,7 @@ function QuickViewProduct({ detailProduct }) {
                     <p className="small-desc">{detailProduct.description}</p>
 
                     <div className="product-options">
-                        <span>Colors: </span>
+                        <span>Màu sắc: </span>
                         {
                             detailProduct.colors.map((color, index) => (
                                 <div key={color}>
@@ -176,7 +176,7 @@ function QuickViewProduct({ detailProduct }) {
                         <strong>{detailProduct.sold} <span>Products sold.</span></strong>
                     </div>
                     <div className="quantity-btn">
-                        <span>Quantity: </span>
+                        <span>Số lượng: </span>
                         <button onClick={() => quantity === 1 ? setQuantity(1) : setQuantity(quantity - 1)}>-</button>
                         <span>{quantity}</span>
                         <button onClick={() => setQuantity(quantity + 1)}>+</button>
@@ -187,7 +187,7 @@ function QuickViewProduct({ detailProduct }) {
                             detailProduct.countInStock > 0 ?
                                 <Link to="#!" className="add-cart"
                                     onClick={() => handleAddCart(detailProduct, color, size, quantity)}
-                                >Add to cart</Link> : <span>Hết hàng</span>
+                                >Thêm vào giỏ hàng</Link> : <span>Hết hàng</span>
                         }
                         <Link className="view-detail" to={`/detail/${detailProduct._id}`} onClick={handleCloseView}>
                             Xem chi tiết
