@@ -234,7 +234,7 @@ function Cart() {
   }
 
   const checkProduct = (product) => {
-    products.find(p => {
+    const checkItem = products.find(p => {
       if (p.product_id === product.product_id) {
         if (p.countInStock <= 0) {
           updateCartItem(product._id, "countInStock", p.countInStock)
@@ -262,28 +262,17 @@ function Cart() {
               autoClose: 3000
             });
         }
-
       }
+      return p.product_id === product.product_id
     })
+    if (typeof checkItem === 'undefined') {
+      updateCartItem(product._id, "isPublished", false)
+      toast.warning(`Sản phẩm ${product.title} không tồn tại!`, {
+        position: "top-center",
+        autoClose: 3000
+      });
+    }
   }
-
-  // const checkInStock = (product) => {
-  //   products.find(p => {
-  //     if (p.product_id === product.product_id) {
-  //       const totalQuantity = cart.reduce((acc, curr) => {
-  //         return (curr.product_id === p.product_id) ? acc + curr.quantity : acc
-  //       }, 0)
-  //       if (p.countInStock < totalQuantity) {
-
-  //         toast.warning(`Sản phẩm ${p.title} không đủ số lượng!`, {
-  //           position: "top-center",
-  //           autoClose: 3000
-  //         });  
-
-  //       } 
-  //     }
-  //   })
-  // }
 
   const handleBuyClick = (e) => {
     e.preventDefault()

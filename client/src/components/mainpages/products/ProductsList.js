@@ -10,6 +10,8 @@ import Loading from '../utils/loading/Loading'
 import Filters from './Filters'
 import DetailProductAdmin from '../detailProduct/DetailProductAdmin'
 import axios from 'axios'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 function ProductsList() {
     const state = useContext(GlobalState)
@@ -17,7 +19,7 @@ function ProductsList() {
     const [categories] = state.categoriesAPI.categories
     const [token] = state.token
     const [callback, setCallback] = state.productsAPI.callback
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState({ id: '', loading: false })
     const [currentProduct, setCurrentProduct] = useState(false)
 
     const uploadRef = useRef()
@@ -27,7 +29,11 @@ function ProductsList() {
             try {
 
 
-                setLoading(true)
+                setLoading({
+                    ...loading,
+                    id,
+                    loading: true
+                })
 
                 const destroyImg = axios.post('/api/destroy', { public_id }, {
                     headers: { Authorization: token }
@@ -39,7 +45,15 @@ function ProductsList() {
                 await destroyImg
                 await deleteProduct
                 setCallback(!callback)
-                setLoading(false)
+                setLoading({
+                    ...loading,
+                    id,
+                    loading: false
+                })
+                toast.success(`Deleted successfully!`, {
+                    position: "top-center",
+                    autoClose: 3000
+                });
             } catch (err) {
                 alert(err.response.data.msg)
             }
@@ -134,7 +148,6 @@ function ProductsList() {
                             </tr>
                         </thead>
                         <tbody className="table-body">
-                            {loading ? <Loading /> : null}
                             {
                                 currentItems.map(product => (
                                     <tr key={product._id}>
@@ -187,7 +200,10 @@ function ProductsList() {
                                                 </div>
                                                 <div className="delete-product">
                                                     <Link to="#!" onClick={() => deleteProduct(product._id, product.images[0].public_id)}>
-                                                        <MdIcons.MdDelete style={{ color: '#9e9e9e' }} />
+                                                        {product._id === loading.id && loading.loading === true ?
+                                                            <FontAwesomeIcon icon={faSpinner} className="fa-spin" style={{ color: '#9e9e9e' }} /> :
+                                                            <MdIcons.MdDelete style={{ color: '#9e9e9e' }} />
+                                                        }
                                                     </Link>
                                                 </div>
                                             </div>

@@ -60,7 +60,7 @@ export default function CodModal({ codSuccess, user }) {
     phone: user.phone
   })
 
-  const [address, setAddress] = useState(user.address || '')
+  const [address, setAddress] = useState(user.address ?? '')
 
   const addressRef = useRef()
 
@@ -124,9 +124,7 @@ export default function CodModal({ codSuccess, user }) {
               <label htmlFor="address">Địa chỉ</label>
               <input type="text"
                 name='address'
-                // value={user.address ? `${user.address.detailAddress ? user.address.detailAddress : ''}, ${user.address.ward?.label}, ${user.address.district?.label}, ${user.address.city?.label}` : ''}
-                value={`${address.detailAddress ? address.detailAddress : ''}, ${address.ward?.label}, ${address.district?.label}, ${address.city?.label}` || ''}
-                className=""
+                value={address.ward?.label ? `${address.detailAddress ? address.detailAddress : ''}, ${address.ward?.label}, ${address.district?.label}, ${address.city?.label}` : ''}
                 onChange={handleChangeInput}
                 disabled
               />

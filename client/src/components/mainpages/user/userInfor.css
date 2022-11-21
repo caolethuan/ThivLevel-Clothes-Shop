@@ -82,6 +82,12 @@
     border-radius: 3px;
     width: 100%;
     flex: 0.8;
+    max-width: 270px;
+}
+
+.user-infor-wrapper form .user-infor-field input[type=date] {
+    width: fit-content;
+    flex: unset;
 }
 
 .user-infor-wrapper form .save-btn {

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import MySlider from '../slider/MySlider'
 import * as FiIcons from 'react-icons/fi'
 import * as RiIcons from 'react-icons/ri'
@@ -21,7 +21,12 @@ function Home() {
     const [bestSeller] = state.productsAPI.bestSeller
     const [newArrival] = state.productsAPI.newArrival
     const [currentProduct, setCurrentProduct] = useState(false)
+    const [callback, setCallback] = state.userAPI.callback
 
+    useEffect(() => {
+        setCallback(!callback)
+    }, [])
+    
     const handleViewDetail = (product) => {
         const viewbox = document.querySelector('.product-view-detail-box')
         viewbox.classList.toggle('active')
