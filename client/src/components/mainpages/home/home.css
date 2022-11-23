@@ -54,3 +54,28 @@
     width: 100%;
     justify-content: center;
 }
+
+.watch-more-products-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.watch-more-products {
+    width: fit-content;
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background: #fff;
+    color: #246284;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 2px solid #246284;
+    transition: .1s linear;
+}
+
+.watch-more-products:hover {
+    background: #246284;
+    color: #fff;
+}

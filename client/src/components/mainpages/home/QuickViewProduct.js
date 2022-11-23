@@ -72,6 +72,10 @@ function QuickViewProduct({ detailProduct }) {
     const handleCloseView = (e) => {
         const viewbox = document.querySelector('.product-view-detail-box')
         viewbox.classList.remove('active')
+        setQuantity(1)
+        setColor('')
+        setSize(false)
+        setSelectedColor(0)
         setSlideIndex(1)
     }
 
@@ -157,7 +161,10 @@ function QuickViewProduct({ detailProduct }) {
                         {
                             detailProduct.size.map(sz => {
                                 return <div className='size' key={sz}>
-                                    <input type='radio' name='size' key={sz} value={sz} id={sz} onChange={() => setSize(sz)} />
+                                    <input type='radio' name='size' key={sz} value={sz} id={sz}
+                                        onChange={() => setSize(sz)}
+                                        checked={size === sz}
+                                    />
                                     <label htmlFor={sz}>{sz}</label>
                                 </div>
                             })

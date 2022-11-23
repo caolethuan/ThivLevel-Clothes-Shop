@@ -40,7 +40,6 @@ function Login() {
   }
 
   const responseGoogleSuccess = async (res) => {
-    console.log(res)
     const result = res?.profileObj
     const accessToken  = res.accessToken
     try {

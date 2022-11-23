@@ -138,7 +138,7 @@ function Products() {
           <div className="products res-row">
             {
               currentItems.length === 0 ?
-                <h2 className="no-results">Hình như không có gì thì phải :(.</h2> :
+                <h2 className="no-results">Hình như không có gì thì phải :(</h2> :
                 currentItems.map(product => {
                   return <ProductItem key={product._id} product={product}
                     isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck}

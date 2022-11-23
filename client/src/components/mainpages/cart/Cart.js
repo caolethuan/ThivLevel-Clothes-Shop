@@ -123,7 +123,6 @@ function Cart() {
           cart.splice(index, 1)
         }
       })
-      console.log(cart);
       setCart([...cart])
       addToCart(cart)
     }
@@ -131,14 +130,12 @@ function Cart() {
   }
 
   const tranSuccess = async (payment) => {
-    console.log('payment: ', payment);
 
     const { id, purchase_units } = payment
     const paymentID = id
     const address = purchase_units[0].shipping.address
     address.recipient_name = purchase_units[0].shipping.name.full_name
     const name = purchase_units[0].shipping.name.full_name
-    console.log('address: ', address);
     const phone = user.phone
     const method = 'Paypal'
     const isPaid = true
@@ -158,7 +155,6 @@ function Cart() {
 
   const codSuccess = async (payment, address) => {
 
-    console.log('payment: ', payment)
     const { name, phone } = payment
     const method = 'COD'
     const isPaid = false
@@ -293,9 +289,15 @@ function Cart() {
 
 
   if (cart.length === 0) {
+    const style = {
+      display: 'block',
+      width: '100%',
+      height: '600px',
+      objectFit: 'contain'
+    }
     return (
       <div style={{ width: "100%", textAlign: 'center' }} >
-        <img draggable={false} style={{ width: "fit-content" }}
+        <img draggable={false} style={style}
           src="https://rtworkspace.com/wp-content/plugins/rtworkspace-ecommerce-wp-plugin/assets/img/empty-cart.png" alt="" />
       </div>
     )

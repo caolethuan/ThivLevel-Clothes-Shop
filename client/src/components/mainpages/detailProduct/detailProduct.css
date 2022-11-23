@@ -425,5 +425,9 @@
 .relate-products-list {
     display: flex
 }
+
+.related-products .quick-view {
+    display: none;
+}
 /* Pagination review*/
 @import url('../utils/ReviewItem/ReviewItem.css');

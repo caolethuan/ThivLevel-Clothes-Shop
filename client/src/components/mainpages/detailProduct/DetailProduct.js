@@ -38,6 +38,13 @@ function DetailProduct() {
     const slideRef = useRef()
 
     useEffect(() => {
+        setColor(false)
+        setSize(false)
+        setQuantity(1)
+        setSelectedColor(0)
+    }, [params.id])
+
+    useEffect(() => {
         if (params.id) {
             products.forEach(product => {
                 if (product._id === params.id) {
@@ -219,7 +226,8 @@ function DetailProduct() {
                                     {
                                         detailProduct.size.map(sz => {
                                             return <div className='size' key={sz}>
-                                                <input type='radio' name='size' key={sz} value={sz} id={sz} onChange={() => setSize(sz)} />
+                                                <input type='radio' name='size' key={sz} value={sz} id={sz}
+                                                    onChange={() => setSize(sz)} checked={size === sz} />
                                                 <label htmlFor={sz}>{sz}</label>
                                             </div>
                                         })

@@ -37,7 +37,6 @@ function Paypal({ tranSuccess, cart }) {
                         });
                 }}
                 onApprove={(data, actions) => {
-                    console.log('data: ', data);
                     return actions.order.capture().then(function (details) {
                         // This function shows a transaction success message to your buyer.
                         tranSuccess(details)

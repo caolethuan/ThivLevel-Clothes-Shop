@@ -174,12 +174,12 @@ function useLocationForm(shouldFetchInitialLocation, initData) {
             addressFormElement.classList.remove('active')
         }
 
-        console.group("Address")
-        console.log("City: ", state.selectedCity);
-        console.log("District: ", state.selectedDistrict);
-        console.log("Ward: ", state.selectedWard);
-        console.log("Detail address: ", detailAddressValue);
-        console.groupEnd();
+        // console.group("Address")
+        // console.log("City: ", state.selectedCity);
+        // console.log("District: ", state.selectedDistrict);
+        // console.log("Ward: ", state.selectedWard);
+        // console.log("Detail address: ", detailAddressValue);
+        // console.groupEnd();
     }
 
 

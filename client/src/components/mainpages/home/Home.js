@@ -9,6 +9,7 @@ import * as MdIcons from 'react-icons/md'
 import { GlobalState } from '../../../GlobalState'
 import ProductItem from '../utils/productItem/ProductItem'
 import QuickViewProduct from './QuickViewProduct'
+import { Link } from 'react-router-dom'
 
 const iconStyle = {
     color: '#246184',
@@ -126,6 +127,15 @@ function Home() {
                                     />
                                 })
                             }
+                        </div>
+                    </div>
+                </div>
+                <div className="res-row">
+                    <div className="l-12 m-12 c-12">
+                        <div className="watch-more-products-wrapper">
+                            <Link to="/products" className="watch-more-products">
+                                Xem thêm
+                            </Link>
                         </div>
                     </div>
                 </div>
