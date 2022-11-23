@@ -97,10 +97,20 @@ function UserAPI(token) {
             autoClose: 3000,
         });
 
+        const guid = () => {
+            const s4 = () => {
+                return Math.floor((1 + Math.random()) * 0x10000)
+                    .toString(16)
+                    .substring(1);
+            }
+            //return id of format 'aaaaaaaa'-'aaaa'-'aaaa'-'aaaa'-'aaaaaaaaaaaa'
+            return s4() + s4() + s4() + s4() + s4() + s4()
+        }
+
         if (check) {
-            setCart([...cart, { ...product, _id: product._id.slice(13) + Date.now(), color, size, quantity }])
+            setCart([...cart, { ...product, _id: guid(), color, size, quantity }])
             await axios.patch('/user/addcart', {
-                cart: [...cart, { ...product, _id: product._id.slice(13) + Date.now(), color, size, quantity }]
+                cart: [...cart, { ...product, _id: guid(), color, size, quantity }]
             }, {
                 headers: { Authorization: token }
             })
