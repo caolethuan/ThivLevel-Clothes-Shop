@@ -78,12 +78,12 @@ function Users() {
     return (
         <div>
             <div className='content-header'>
-                <h2>User</h2>
+                <h2>Tài khoản người dùng</h2>
             </div>
 
             <div className="content-wrapper">
                 <div className="search-user">
-                    <input className="search-user-input" value={searchPhrase} type="text" placeholder="Search by name/ emai/ phone"
+                    <input className="search-user-input" value={searchPhrase} type="text" placeholder="Tìm kiếm bằng tên/ emai/ sđt"
                         onChange={search} />
                 </div>
                 <div className="users-list">
@@ -91,13 +91,13 @@ function Users() {
                         <thead className="table-header">
                             <tr>
                                 <th>ID</th>
-                                <th>NAME</th>
+                                <th>HỌ TÊN</th>
                                 <th>EMAIL</th>
-                                <th>PHONE</th>
-                                <th>JOINING DATE</th>
-                                <th>ROLE</th>
-                                <th>STATUS</th>
-                                <th>ACTIONS</th>
+                                <th>SĐT</th>
+                                <th>NGÀY TẠO</th>
+                                <th>VAI TRÒ</th>
+                                <th>TRẠNG THÁI</th>
+                                <th>HÀNH ĐỘNG</th>
                             </tr>
                         </thead>
                         <tbody className="table-body">

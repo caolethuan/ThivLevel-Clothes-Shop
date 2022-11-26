@@ -85,43 +85,43 @@ function DetailOrderAdmin() {
     return (
         <div>
             <div className='content-header'>
-                <h2>Order detail</h2>
+                <h2>Chi tiết đơn hàng</h2>
             </div>
             <div className='content-body'>
                 <div className='order-detail-wrapper'>
                     <div className='order-detail-header'>
                         <div className='order-id-status'>
-                            <h1>ORDER</h1>
-                            <p>STATUS: <span>{detailOrder.status}</span></p>
-                            <p>PAID: <span>{detailOrder.isPaid ? 'Paid' : 'Unpaid'}</span></p>                           
+                            <h1>ĐƠN HÀNG</h1>
+                            <p>TRẠNG THÁI: <span>{detailOrder.status}</span></p>
+                            <p>THANH TOÁN: <span>{detailOrder.isPaid ? 'Đã thanh toán' : 'Chưa thanh toán'}</span></p>                           
                         </div>
                         <div className='change-order-status'>
-                            <span>Change Status: </span>
+                            <span>Cập nhật trạng thái: </span>
                             <select name="status" value={statusOrder} onChange={handleChangeSatus}>
 
                                 <option value="Pending">
-                                    Pending
+                                    Đang chờ
                                 </option>
 
                                 <option value="Processing">
-                                    Processing
+                                    Đang xử lý
                                 </option>
 
                                 <option value="Shipping">
-                                    Shipping
+                                    Đang giao
                                 </option>
 
                                 <option value="Delivered">
-                                    Delivered
+                                    Đã giao
                                 </option>
 
                                 <option value="Cancel">
-                                    Cancel
+                                    Hủy
                                 </option>
 
                             </select>
 
-                            <button className='save-status' onClick={HandleSubmitChangeStatus}>Save</button>
+                            <button className='save-status' onClick={HandleSubmitChangeStatus}>Lưu</button>
                         </div>
                         <div className='order-name-address'>
                             <h1>{detailOrder.name}</h1>
@@ -140,21 +140,21 @@ function DetailOrderAdmin() {
                     </div>
                     <div className='order-detail-body'>
                         <div className='date-order'>
-                            <label>CREATE DATE</label>
+                            <label>NGÀY TẠO</label>
                             <p>{new Date(detailOrder.createdAt).toLocaleDateString()}</p>
                             <span>{moment(detailOrder.createdAt).format('LT')}</span>
                         </div>
                         <div className='date-order'>
-                            <label>LAST UPDATED AT:</label>
+                            <label>CẬP NHẬT LẦN CUỐI:</label>
                             <p>{new Date(detailOrder.updatedAt).toLocaleDateString()}</p>
                             <span>{moment(detailOrder.updatedAt).format('LT')}</span>
                         </div>
                         <div className='id-order'>
-                            <label>ORDER ID</label>
+                            <label>MÃ ĐƠN</label>
                             <p style={{ textTransform: 'uppercase' }}>{detailOrder._id}</p>
                         </div>
                         <div className='phone-number-order'>
-                            <label>PHONE NUMBER</label>
+                            <label>SỐ ĐIỆN THOẠI</label>
                             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <p>+84 {detailOrder.phone ? detailOrder.phone : 'NO'}</p>
                                 <a href="#!" onClick={() => handleChangePhone(detailOrder)}>
@@ -167,12 +167,12 @@ function DetailOrderAdmin() {
                         <table className="oder-product-list-table">
                             <thead className="table-header">
                                 <tr>
-                                    <th>SR.</th>
-                                    <th>PRODUCT</th>
-                                    <th>TYPE</th>
-                                    <th>QUANTITY</th>
-                                    <th>ITEM PRICE</th>
-                                    <th>AMOUNT</th>
+                                    <th>STT</th>
+                                    <th>SẢN PHẨM</th>
+                                    <th>SIZE/MÀU</th>
+                                    <th>SỐ LƯỢNG</th>
+                                    <th>GIÁ</th>
+                                    <th>TỔNG CỘNG</th>
                                 </tr>
                             </thead>
                             <tbody className="table-body">
@@ -185,7 +185,7 @@ function DetailOrderAdmin() {
                                                     <td>
                                                         <div className='table-product-column'>
                                                             <img className='table-thumbnail-product' src={item.images[0].url} alt='hinh'></img>
-                                                            <span>{item.title}</span>
+                                                            <span style={{ marginLeft: 5}} >{item.title}</span>
                                                         </div>
                                                     </td>
                                                     <td className='table-product-column'>
@@ -205,20 +205,20 @@ function DetailOrderAdmin() {
                     </div>
                     <div className='payment-detail-order'>
                         <div className='method'>
-                            <label>PAYMENT METHOD</label>
+                            <label>PHƯƠNG THỨC THANH TOÁN</label>
                             <p>{detailOrder.method}</p>
-                            {detailOrder.paymentID ? <p>PAYMENT ID: {detailOrder.paymentID}</p> : ''}
+                            {detailOrder.paymentID ? <p>MÃ THANH TOÁN: {detailOrder.paymentID}</p> : ''}
                         </div>
                         <div className='shipping-cost'>
-                            <label>SHIPPING COST</label>
+                            <label>PHÍ VẬN CHUYỂN</label>
                             <p>$ 0</p>
                         </div>
                         <div className='discount'>
-                            <label>DISCOUNT</label>
+                            <label>GIẢM GIÁ</label>
                             <p>$ 0</p>
                         </div>
                         <div className='total-amount'>
-                            <label>TOTAL AMOUNT</label>
+                            <label>TỔNG THANH TOÁN</label>
                             <p>${detailOrder.total}</p>
                         </div>
                     </div>

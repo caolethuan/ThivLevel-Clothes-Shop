@@ -1,4 +1,5 @@
 .content-body{
+    border: 1px solid #ddd;
     background-color: #fff;
     margin-right: 15px;
     border-radius: 15px;
@@ -87,6 +88,7 @@
 
 .order-detail-wrapper .list-product-order .oder-product-list-table tbody td {
     border: none;
+    justify-content: center;
 }
 
 .table-product-column {

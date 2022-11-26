@@ -26,7 +26,8 @@ function AddStaff() {
       })
 
       toast.success('Add staff successfully.', {
-        autoClose: 2000
+        position: "top-center",
+        autoClose: 3000
       })
 
       setTimeout(() => {
@@ -34,7 +35,10 @@ function AddStaff() {
       }, 2200)
 
     } catch (error) {
-      toast.error(error.response.data.msg)
+      toast.error(error.response.data.msg), {
+        position: "top-center",
+        autoClose: 3000
+      }
     }
   }
 

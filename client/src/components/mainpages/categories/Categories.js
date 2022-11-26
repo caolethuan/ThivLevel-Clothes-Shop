@@ -54,7 +54,7 @@ function Categories() {
   return (
     <div>
       <div className='content-header'>
-        <h2>Category</h2>
+        <h2>Danh mục</h2>
       </div>
 
       <div className="content-wrapper">
@@ -64,7 +64,7 @@ function Categories() {
               onChange={e => setCategory(e.target.value)}
             />
 
-            <button type="submit">{onEdit ? "Update" : "Create"}</button>
+            <button type="submit">{onEdit ? "Lưu" : "Tạo"}</button>
           </form>
 
           <div>
@@ -73,8 +73,8 @@ function Categories() {
                 <div className="row" key={category._id}>
                   <p>{category.name}</p>
                   <div>
-                    <button onClick={() => editCategory(category._id, category.name)}>Edit</button>
-                    <button onClick={() => deleteCategory(category._id)}>Delete</button>
+                    <button onClick={() => editCategory(category._id, category.name)}>Sửa</button>
+                    <button onClick={() => deleteCategory(category._id)}>Xóa</button>
                   </div>
                 </div>
               ))

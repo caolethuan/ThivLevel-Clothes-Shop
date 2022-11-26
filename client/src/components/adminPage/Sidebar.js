@@ -49,7 +49,6 @@ const Content = styled.div`
 
 const SidebarWrap = styled.div`
   border-radius: 10px;
-  width: 250px;
   overflow: hidden;
   margin-right: 20px;
   background: #fff;
@@ -107,12 +106,12 @@ function Sidebar() {
           <FlexDiv>
             <AdminProfile to='/user'>
               <BiIcons.BiUser style={{ marginRight: 10, color: '#008c90'}} />
-              Admin Profile
+              Hồ sơ của tôi
             </AdminProfile>
 
             <Logout to="/" onClick={logoutUser}>
               <BiIcons.BiLogOut style={{ marginRight: 10 }} />
-              Logout
+              Đăng xuất
             </Logout>
           </FlexDiv>
         </Nav>

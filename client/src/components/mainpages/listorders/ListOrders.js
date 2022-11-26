@@ -52,49 +52,49 @@ function ListOrders() {
     return (
         <div>
             <div className='content-header'>
-                <h2>Orders</h2>
+                <h2>Quản lý đơn hàng</h2>
             </div>
 
             <div className="content-wrapper">
                 <div className="ctrl-order">
                     <div className='search-order-by'>
-                        <input className="search-order-input" value={searchPhrase} type="text" placeholder="Search by order id/name/ emai/ phone"
+                        <input className="search-order-input" value={searchPhrase} type="text" placeholder="Tìm kiếm bằng mã đơn/ tên/ emai/ sđt"
                             onChange={search} />
                     </div>
 
                     <div className="filter-order-status">
-                        <span>Status: </span>
+                        <span>Trạng thái: </span>
                         <select name="status" value={status} onChange={handleStatus}>
-                            <option value="">All orders</option>
+                            <option value="">Tất cả</option>
 
                             <option value="status=Pending">
-                                Pending
+                                Đang chờ
                             </option>
 
                             <option value="status=Processing">
-                                Processing
+                                Đang xử lý
                             </option>
 
                             <option value="status=Shipping">
-                                Shipping
+                                Đang giao
                             </option>
 
                             <option value="status=Delivered">
-                                Delivered
+                                Đã giao
                             </option>
 
                             <option value="status=Cancel">
-                                Cancel
+                                Hủy
                             </option>
 
                         </select>
                     </div>
 
                     <div className="sort-order-by">
-                        <span>Sort by: </span>
+                        <span>Sắp xếp: </span>
                         <select value={sort} onChange={e => setSort(e.target.value)}>
-                            <option value="">Newest</option>
-                            <option value="sort=oldest">Oldest</option>
+                            <option value="">Mới nhất</option>
+                            <option value="sort=oldest">Cũ nhất</option>
                         </select>
                     </div>
                 </div>
@@ -102,14 +102,14 @@ function ListOrders() {
                     <table className="orders-list-table">
                         <thead className="table-header">
                             <tr>
-                                <th>ID</th>
-                                <th>TIME</th>
-                                <th>NAME</th>
-                                <th>PHONE</th>
-                                <th>METHOD</th>
-                                <th>AMOUNT</th>
-                                <th>STATUS</th>
-                                <th>ACTIONS</th>
+                                <th>MÃ ĐƠN</th>
+                                <th>NGÀY TẠO</th>
+                                <th>HỌ TÊN</th>
+                                <th>SĐT</th>
+                                <th>PHƯƠNG THỨC</th>
+                                <th>TỔNG CỘNG</th>
+                                <th>TRẠNG THÁI</th>
+                                <th>CẬP NHẬT</th>
                             </tr>
                         </thead>
                         <tbody className="table-body">

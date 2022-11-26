@@ -110,7 +110,7 @@ function ProductsList() {
     return (
         <div>
             <div className='content-header'>
-                <h2>Products List</h2>
+                <h2>Danh sách sản phẩm</h2>
             </div>
             <div className="products-list-container">
                 <div className="products-list-filter">
@@ -118,7 +118,7 @@ function ProductsList() {
                 </div>
                 <div className="products-list-actions">
                     <div className="create__product">
-                        <Link to='/create_product'>+ Add product</Link>
+                        <Link to='/create_product'>+ Thêm sản phẩm</Link>
                     </div>
                     <div className="file-wrapper">
                         <div className="file__upload">
@@ -136,14 +136,14 @@ function ProductsList() {
                         <thead className="table-header">
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th>
-                                <th>Category</th>
-                                <th>Price</th>
-                                <th>In Stock</th>
-                                <th>Status</th>
-                                <th>Details</th>
-                                <th>Published</th>
-                                <th>Actions</th>
+                                <th>TÊN</th>
+                                <th>DANH MỤC</th>
+                                <th>GIÁ</th>
+                                <th>TRONG KHO</th>
+                                <th>TRẠNG THÁI</th>
+                                <th>CHI TIẾT</th>
+                                <th>ẨN/HIỆN</th>
+                                <th>SỬA/XÓA</th>
                             </tr>
                         </thead>
                         <tbody className="table-body">

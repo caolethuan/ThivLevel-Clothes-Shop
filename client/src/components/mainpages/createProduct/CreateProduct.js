@@ -12,8 +12,8 @@ const initialState = {
     title: '',
     price: 0,
     countInStock: 0,
-    description: 'This is default description',
-    content: 'And this is the default content',
+    description: 'Đây là mô tả mặc định',
+    content: 'Đây là nội dung mặc định',
     category: '',
     id: ''
 }
@@ -201,32 +201,32 @@ function CreateProduct() {
     return (
         <div>
             <div className='content-header'>
-                <h2>{onEdit ? 'Update product' : 'Create Product'}</h2>
+                <h2>{onEdit ? 'Cập nhật sản phẩm' : 'Tạo sản phẩm'}</h2>
             </div>
 
             <div className="content-wrapper">
                 <div className="create_product">
                     <form onSubmit={handleSubmit}>
                         <div className="row">
-                            <label htmlFor="product_id">Product ID</label>
+                            <label htmlFor="product_id">Mã sản phẩm</label>
                             <input type="text" name="product_id" id="product_id" required
                                 value={product.product_id} onChange={handleChangeInput} disabled={onEdit} />
                         </div>
 
                         <div className="row">
-                            <label htmlFor="title">Title</label>
+                            <label htmlFor="title">Tên sản phẩm</label>
                             <input type="text" name="title" id="title" required
                                 value={product.title} onChange={handleChangeInput} />
                         </div>
 
                         <div className="row">
-                            <label htmlFor="price">Price</label>
+                            <label htmlFor="price">Giá</label>
                             <input type="number" name="price" id="price" required
                                 value={product.price} onChange={handleChangeInput} />
                         </div>
 
                         <div className="row">
-                            <label>Color</label>
+                            <label>Màu sắc</label>
                             <div id="wrapper">
                                 {
                                     colors.map(item => {
@@ -260,7 +260,7 @@ function CreateProduct() {
 
                         </div>
                         <div className='color-picker-wrapper'>
-                            <label htmlFor="head"> Choose color here:</label>
+                            <label htmlFor="head">Chọn màu:</label>
                             <input
                                 type='color'
                                 id='head'
@@ -308,27 +308,27 @@ function CreateProduct() {
                         </div>
 
                         <div className="row">
-                            <label htmlFor="countInStock">In Stock</label>
+                            <label htmlFor="countInStock">Trong kho</label>
                             <input type="number" name="countInStock" id="countInStock" required
                                 value={product.countInStock} onChange={handleChangeInput} />
                         </div>
 
                         <div className="row">
-                            <label htmlFor="description">Description</label>
+                            <label htmlFor="description">Mô tả</label>
                             <textarea type="text" name="description" id="description" required
                                 value={product.description} rows="4" onChange={handleChangeInput} />
                         </div>
 
                         <div className="row">
-                            <label htmlFor="content">Content</label>
+                            <label htmlFor="content">Nội dung</label>
                             <textarea type="text" name="content" id="content" required
                                 value={product.content} rows="4" onChange={handleChangeInput} />
                         </div>
 
                         <div className="row">
-                            <label htmlFor="categories">Categories</label>
+                            <label htmlFor="categories">Danh mục</label>
                             <select name="category" value={product.category} onChange={handleChangeInput}>
-                                <option value="">Please select a category</option>
+                                <option value="">Chọn danh mục cho sản phẩm</option>
                                 {
                                     categories.map((category) => (
                                         <option value={category._id} key={category._id}>
@@ -340,11 +340,11 @@ function CreateProduct() {
                             </select>
                         </div>
 
-                        <button type="submit">{onEdit ? "Update" : "Create"}</button>
+                        <button type="submit">{onEdit ? "Cập nhập" : "Tạo"}</button>
                     </form>
                     <div className="divider"></div>
                     <div className="upload">
-                        <label htmlFor="">Product images</label>
+                        <label htmlFor="">Hình ảnh sản phẩm</label>
                         <input type="file" name="file" id="file_up" ref={fileUpRef}
                             onChange={handleUpload} style={{ display: 'none' }} />
                         <button
@@ -352,7 +352,7 @@ function CreateProduct() {
                             onClick={() => fileUpRef.current.click()}
                         >
                             <FontAwesomeIcon icon={faDownload} style={{ marginRight: 5 }} />
-                            Upload Images
+                            Tải ảnh lên
                         </button>
                         <FileList files={images} removeFile={removeFile} />
                     </div>

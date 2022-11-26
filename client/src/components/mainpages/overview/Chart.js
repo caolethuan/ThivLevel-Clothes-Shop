@@ -37,7 +37,7 @@ function Chart() {
   return (
     <div>
       <div className='content-header'>
-        <h2>Statistics</h2>
+        <h2>Thống kê</h2>
       </div>
       <div className="content-wrapper">
         <div className='chart grid-3'>
@@ -47,7 +47,7 @@ function Chart() {
                 <span className='icon-bg primary-bg'>$</span>
               </div>
               <div className='card-content'>
-                <h3>Total sales</h3>
+                <h3>Doanh thu</h3>
                 <span>${totalSales.toFixed(2)}</span>
               </div>
             </div>
@@ -58,7 +58,7 @@ function Chart() {
                 <span className='icon-bg success-bg'><FaBoxOpen style={{ color: '#0f5132' }} /></span>
               </div>
               <div className='card-content'>
-                <h3>Total ordered</h3>
+                <h3>Đơn hàng</h3>
                 <span>{orderTotal}</span>
               </div>
             </div>
@@ -69,7 +69,7 @@ function Chart() {
                 <span className='icon-bg warning-bg'><IoShirt style={{ color: '#664d03' }} /></span>
               </div>
               <div className='card-content'>
-                <h3>Total products</h3>
+                <h3>Sản phẩm</h3>
                 <span>{products.length}</span>
               </div>
             </div>
@@ -79,7 +79,7 @@ function Chart() {
         <div className='chart grid-2'>
           <div className='card-chart'>
             <div className='card-chart-body'>
-              <h3 className='cart-title'>Sales statistics</h3>
+              <h3 className='cart-title'>Doanh thu</h3>
               <div>
                 <Iframe
                   url="https://charts.mongodb.com/charts-mern-stack-app-wfaew/embed/charts?id=6361ee03-562c-4025-840e-a46d79c93297&maxDataAge=3600&theme=light&autoRefresh=true"
@@ -97,7 +97,7 @@ function Chart() {
           </div>
           <div className='card-chart'>
             <div className='card-chart-body'>
-              <h3 className='cart-title'>Order statistics</h3>
+              <h3 className='cart-title'>Đơn hàng</h3>
               <div>
                 <Iframe
                   url="https://charts.mongodb.com/charts-mern-stack-app-wfaew/embed/charts?id=63569dfb-302a-46a7-8bae-4bad081df989&maxDataAge=3600&theme=light&autoRefresh=true"
@@ -115,7 +115,7 @@ function Chart() {
           </div>
           <div className='card-chart'>
             <div className='card-chart-body'>
-              <h3 className='cart-title'>Products statistics</h3>
+              <h3 className='cart-title'>Sản phẩm</h3>
               <div>
                 <Iframe
                   url="https://charts.mongodb.com/charts-mern-stack-app-wfaew/embed/charts?id=63569915-8631-4ca8-8623-69c997d6ade6&maxDataAge=3600&theme=light&autoRefresh=true"
