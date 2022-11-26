@@ -11,7 +11,8 @@ import { toast } from 'react-toastify'
 function QuickViewProduct({ detailProduct }) {
     const state = useContext(GlobalState)
     const addCart = state.userAPI.addCart
-
+    const [categories] = state.categoriesAPI.categories
+    
     const [slideIndex, setSlideIndex] = useState(1)
     const [width, setWidth] = useState(0)
     const [start, setStart] = useState(0)
@@ -135,6 +136,7 @@ function QuickViewProduct({ detailProduct }) {
 
                     <p className="product-category">
                         #{detailProduct.product_id}
+                        <label>/ Phân loại: </label> <span>{categories.find(c => c._id === detailProduct.category).name}</span>
                     </p>
                     <Rating value={detailProduct.rating} text={''} />
                     <p className="product-price">

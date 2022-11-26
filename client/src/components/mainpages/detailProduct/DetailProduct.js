@@ -16,6 +16,7 @@ function DetailProduct() {
     const params = useParams()
     const state = useContext(GlobalState)
     const [products] = state.productsAPI.products
+    const [categories] = state.categoriesAPI.categories
     const [user] = state.userAPI.user
     const addCart = state.userAPI.addCart
     const [detailProduct, setDetailProduct] = useState([])
@@ -200,6 +201,7 @@ function DetailProduct() {
 
                                 <p className="product-category">
                                     #{detailProduct.product_id}
+                                    <label>/ Phân loại: </label> <span>{categories.find(c => c._id === detailProduct.category).name}</span>
                                 </p>
                                 <Rating value={detailProduct.rating} text={''} />
                                 <p className="product-price">

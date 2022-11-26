@@ -48,7 +48,7 @@ function Chart() {
               </div>
               <div className='card-content'>
                 <h3>Total sales</h3>
-                <span>${totalSales}</span>
+                <span>${totalSales.toFixed(2)}</span>
               </div>
             </div>
           </div>
