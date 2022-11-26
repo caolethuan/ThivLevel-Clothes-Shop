@@ -15,6 +15,11 @@
     gap: 30px;
 }
 
+.view-detail-product-modal.quickview-admin .product-page-content {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
 .view-close {
     position: absolute;
     top: -15px;

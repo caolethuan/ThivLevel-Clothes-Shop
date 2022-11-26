@@ -137,7 +137,6 @@ function UserInfor() {
                 headers: { Authorization: token }
             })
 
-            console.log(res);
         } else {
 
             // Update profile
@@ -146,7 +145,6 @@ function UserInfor() {
                 { ...user, username, dateOfbirth: dob, address, gender }, {
                 headers: { Authorization: token }
             })
-            console.log(res);
         }
 
         toast.success("Updated successfull!", {

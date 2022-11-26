@@ -63,7 +63,6 @@ function ProductsList() {
     const handlePublish = async (product) => {
 
         product.isPublished = !product.isPublished
-        console.log(product);
         try {
             await axios.patch(`/api/products/${product._id}/changepublish`, { isPublished: product.isPublished }, {
                 headers: { Authorization: token }

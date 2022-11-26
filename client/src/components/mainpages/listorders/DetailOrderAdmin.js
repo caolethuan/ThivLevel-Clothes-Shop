@@ -61,7 +61,6 @@ function DetailOrderAdmin() {
     const handleChangeAddress = () => {
         addressRef.current.classList.add('active')
     }
-    console.log(statusOrder)
 
     const HandleSubmitAddress = async (address) => {
         try {

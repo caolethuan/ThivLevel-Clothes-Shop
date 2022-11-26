@@ -26,8 +26,6 @@ function Resetpassword() {
     getLink()
   }, [id, token])
 
-  console.log(isValid)
-
 
   if(!isValid) return null
 
