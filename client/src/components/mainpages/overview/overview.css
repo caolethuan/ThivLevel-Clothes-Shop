@@ -1,4 +1,11 @@
 /* Chart css */
+.grid-1{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 30px;
+}
+
 .grid-2{
     display: grid;
     grid-template-columns: repeat(2, 1fr);

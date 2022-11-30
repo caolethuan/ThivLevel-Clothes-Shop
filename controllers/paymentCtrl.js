@@ -167,8 +167,8 @@ const paymentCtrl = {
 
             const { status, cart } = payment
 
-            if(status === 'Shipping' || status === 'Delivered') return res.status(400).json({msg: 'This Order is cant canceled.'})
-            if(status === 'Cancel') return res.status(400).json({msg: 'This Order is already canceled.'})
+            if(status === 'Shipping' || status === 'Delivered') return res.status(400).json({msg: 'Đơn hàng này không thể hủy.'})
+            if(status === 'Cancel') return res.status(400).json({msg: 'Bạn đã hủy đơn hàng này rồi.'})
 
             const groupBy = function(xs, id) {
                 return xs.reduce(function(rv, x) {

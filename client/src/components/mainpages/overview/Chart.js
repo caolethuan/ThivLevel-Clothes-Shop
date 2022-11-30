@@ -96,6 +96,26 @@ function Chart() {
             </div>
           </div>
           <div className='card-chart'>
+              <div className='card-chart-body'>
+                <h3 className='cart-title'>Sản phẩm</h3>
+                <div>
+                  <Iframe
+                    url="https://charts.mongodb.com/charts-mern-stack-app-wfaew/embed/charts?id=63569915-8631-4ca8-8623-69c997d6ade6&maxDataAge=3600&theme=light&autoRefresh=true"
+                    width="100%"
+                    height="380px"
+                    style={{ background: '#FFFFFF', border: 'none', borderRadius: '2px', boxShadow: '0 2px 10px 0 rgba(70, 76, 79, .2)' }}
+                    id=""
+                    className=""
+                    display="block"
+                    position="relative"
+                  />
+                </div>
+
+              </div>
+          </div>
+        </div>
+        <div className='chart grid-1'>
+          <div className='card-chart'>
             <div className='card-chart-body'>
               <h3 className='cart-title'>Đơn hàng</h3>
               <div>
@@ -114,23 +134,23 @@ function Chart() {
             </div>
           </div>
           <div className='card-chart'>
-            <div className='card-chart-body'>
-              <h3 className='cart-title'>Sản phẩm</h3>
-              <div>
-                <Iframe
-                  url="https://charts.mongodb.com/charts-mern-stack-app-wfaew/embed/charts?id=63569915-8631-4ca8-8623-69c997d6ade6&maxDataAge=3600&theme=light&autoRefresh=true"
-                  width="100%"
-                  height="380px"
-                  style={{ background: '#FFFFFF', border: 'none', borderRadius: '2px', boxShadow: '0 2px 10px 0 rgba(70, 76, 79, .2)' }}
-                  id=""
-                  className=""
-                  display="block"
-                  position="relative"
-                />
-              </div>
+              <div className='card-chart-body'>
+                <h3 className='cart-title'>Tình trạng đơn hàng</h3>
+                <div>
+                  <Iframe
+                    url="https://charts.mongodb.com/charts-mern-stack-app-wfaew/embed/charts?id=638728dc-8c0a-413a-8431-97eb466a61af&maxDataAge=3600&theme=light&autoRefresh=true"
+                    width="100%"
+                    height="380px"
+                    style={{ background: '#FFFFFF', border: 'none', borderRadius: '2px', boxShadow: '0 2px 10px 0 rgba(70, 76, 79, .2)' }}
+                    id=""
+                    className=""
+                    display="block"
+                    position="relative"
+                  />
+                </div>
 
+              </div>
             </div>
-          </div>
         </div>
       </div>
     </div>

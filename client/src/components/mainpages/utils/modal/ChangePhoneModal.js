@@ -29,7 +29,10 @@ function ChangePhoneModal({ phoneOrder, callback, setCallback, token }) {
             viewbox.classList.remove('active')
 
         } catch (err) {
-            toast.error(err.respone.data.msg)
+            toast.error(err.respone.data.msg, {
+                position: "top-center",
+                autoClose: 3000
+            })
         }
     }
     return (

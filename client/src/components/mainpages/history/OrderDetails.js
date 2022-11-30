@@ -24,15 +24,23 @@ function OrderDetails() {
     }, [params.id, history])
 
     const handleCancelOrder = async () => {
-        try {
-            await axios.patch(`/api/payment/cancel/${orderDetails._id}`, { cancel: 'Cancel' }, {
-                headers: { Authorization: token }
-            })
+        if (window.confirm('Bạn có chắc chắn muốn hủy đơn hàng này không?')) {
+            try {
+                await axios.patch(`/api/payment/cancel/${orderDetails._id}`, { cancel: 'Cancel' }, {
+                    headers: { Authorization: token }
+                })
 
-            toast.success('Cancel order success.')
+                toast.success('Hủy đơn hàng thành công.', {
+                    position: "top-center",
+                    autoClose: 3000
+                })
 
-        } catch (err) {
-            toast.error(err.response.data.msg)
+            } catch (err) {
+                toast.error(err.response.data.msg, {
+                    position: "top-center",
+                    autoClose: 3000
+                })
+            }
         }
     }
 
@@ -163,9 +171,16 @@ function OrderDetails() {
                                 </div>
                             </div>
                         </div>
-                        <div className='cancel-order'>
-                            <button onClick={handleCancelOrder} >Hủy đơn hàng</button>
-                        </div>
+                        {
+                            orderDetails.status === 'Delivered' ? 
+                            <div className='complete-order-noti'>
+                                <button disabled>Đã hoàn thành</button>
+                            </div> :
+                            <div className='cancel-order'>
+                                <button onClick={handleCancelOrder} >Hủy đơn hàng</button>
+                            </div> 
+                        }
+                        
                     </div>
                 </div>
             </div>

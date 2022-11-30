@@ -47,7 +47,10 @@ function VerifyPhoneNumber() {
                 headers: { Authorization: token }
             })
 
-            toast.success('Xác thực thành công')
+            toast.success('Xác thực thành công', {
+                position: "top-center",
+                autoClose: 3000
+            })
 
             setCallback(!callback)
             setIsReady(false)
@@ -55,7 +58,10 @@ function VerifyPhoneNumber() {
             viewbox.classList.remove('active')
 
         } catch (err) {
-            toast.error(err.response.data.msg)
+            toast.error(err.response.data.msg, {
+                position: "top-center",
+                autoClose: 3000
+            })
         }
     }
 

@@ -71,7 +71,7 @@ function DetailProduct() {
     const submitReviewHandler = async (e) => {
         e.preventDefault()
         try {
-            if (!rating) return toast.info('Bình chọn sao trước khi gửi đánh giá!', {
+            if (!rating) return toast.info('Hãy chọn số sao trước khi gửi đánh giá!', {
                 position: "top-center",
                 autoClose: 3000
             })
@@ -81,11 +81,17 @@ function DetailProduct() {
             setCallback(!callback)
             setRating(0)
             setComment('')
-            toast.success(res.data.msg)
+            toast.success(res.data.msg, {
+                position: "top-center",
+                autoClose: 3000
+            })
         } catch (err) {
             setRating(0)
             setComment('')
-            toast.warn(err.response.data.msg)
+            toast.warn(err.response.data.msg, {
+                position: "top-center",
+                autoClose: 3000
+            })
         }
     }
 

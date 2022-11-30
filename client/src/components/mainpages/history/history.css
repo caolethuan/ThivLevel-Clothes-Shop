@@ -181,6 +181,14 @@ th, td {
     text-align: center;
 }
 
+.pay-infor-wrapper .complete-order-noti button{
+    width: 100%;
+    background-color: green;
+    color: #fff;
+    height: 50px;
+    margin-top: 25px;
+}
+
 .pay-infor-wrapper .cancel-order button{
     background-color: crimson;
     border: 1px solid crimson;

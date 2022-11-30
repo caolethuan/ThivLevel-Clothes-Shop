@@ -125,7 +125,8 @@ const productsCtrl = {
             const user = await Users.findById(req.user.id);
             const userName = user.username
             const imageProfile = user.imageProfile
-            const history = await Payments.find({user_id: req.user.id})
+            const history = await Payments.find({$and: [{user_id: req.user.id},{status: 'Delivered'}]})
+
             const cartsArray = history.map(item => {return item.cart})
             var productsArray = cartsArray.flat()
             const proIdArray = productsArray.map(item => { return item.product_id; })
@@ -143,7 +144,7 @@ const productsCtrl = {
                 )
 
                 if(alreadyReviewed){
-                    return res.status(400).json({msg: 'The product already reviewed.'})
+                    return res.status(400).json({msg: 'Bạn đã đánh giá sản phẩm này rồi.'})
                 }
 
                 const review = {
@@ -159,7 +160,7 @@ const productsCtrl = {
                 product.reviews.reduce((acc, item) => item.rating + acc, 0) / product.reviews.length
 
                 await product.save()
-                res.status(201).json({msg: 'Reviewed Added'})
+                res.status(201).json({msg: 'Cảm ơn bạn đã đánh giá cho chúng tôi.'})
             } else {
                 return res.status(400).json({msg: 'Product not found'})
             }

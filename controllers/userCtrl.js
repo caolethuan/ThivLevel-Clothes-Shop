@@ -805,7 +805,7 @@ const userCtrl = {
       //save to database
       await newUser.save()
 
-      return res.json({ msg: "New Staff is created." })
+      return res.json({ msg: "Đã thêm nhân viên mới." })
     } catch (err) {
       return res.status(500).json({ msg: err.message })
     }

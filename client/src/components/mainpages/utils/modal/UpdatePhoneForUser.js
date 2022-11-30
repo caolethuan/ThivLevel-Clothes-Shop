@@ -39,7 +39,10 @@ function UpdatePhoneForUser() {
             viewbox.classList.remove('active')
 
         } catch (err) {
-            toast.error(err.response.data.msg)
+            toast.error(err.response.data.msg, {
+                position: "top-center",
+                autoClose: 3000
+            })
         }
     }
     return (
