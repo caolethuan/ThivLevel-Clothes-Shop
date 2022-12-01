@@ -5,6 +5,11 @@
     padding: 30px;
 }
 
+.mg--40-l-r {
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
 .product-page-img {
     width: 100%;
     height: fit-content;

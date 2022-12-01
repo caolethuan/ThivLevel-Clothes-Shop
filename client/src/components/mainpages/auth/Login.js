@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { toast } from 'react-toastify'
-import { GoogleLogin } from 'react-google-login';
+import { GoogleLogin } from 'react-google-login'
 import { gapi } from 'gapi-script'
 
 function Login() {

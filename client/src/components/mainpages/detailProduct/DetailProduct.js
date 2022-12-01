@@ -166,7 +166,7 @@ function DetailProduct() {
     if (detailProduct.length === 0) return null
     return (
         <React.Fragment>
-            <section className="product-details res-row">
+            <section className="product-details mg--40-l-r res-row">
                 <div className="col l-12 m-12 c-12">
                     <div className="res-row">
                         <div className="col l-4 m-6 c-12">
@@ -230,7 +230,7 @@ function DetailProduct() {
                                     }
                                 </div>
                                 <div className='size-select'>
-                                    <span>Sizes: </span>
+                                    <span>Size: </span>
                                     {
                                         detailProduct.size.map(sz => {
                                             return <div className='size' key={sz}>
@@ -275,7 +275,7 @@ function DetailProduct() {
                         </div>
                         <div className="col l-12 m-12 c-12">
                             <div className="product-page-content">
-                                <h3>Content</h3>
+                                <h3>Nội dung</h3>
                                 <p>{detailProduct.content}</p>
                             </div>
                         </div>

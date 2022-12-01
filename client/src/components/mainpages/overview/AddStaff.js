@@ -25,7 +25,7 @@ function AddStaff() {
         headers: { Authorization: token }
       })
 
-      toast.success('Add staff successfully.', {
+      toast.success('Thêm nhân viên thành công.', {
         position: "top-center",
         autoClose: 3000
       })

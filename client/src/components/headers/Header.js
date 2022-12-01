@@ -114,8 +114,8 @@ function Header() {
 
             <ul className="header-nav">
                 <li><Link to="/">Trang chủ</Link></li>
-                <li><Link to="/products">Shop</Link></li>
-                <li><Link to="/pages/introduction">About us</Link></li>
+                <li><Link to="/products">Sản phẩm</Link></li>
+                <li><Link to="/pages/introduction">Giới thiệu</Link></li>
                 {
                     isLogged ? loggedRouter() : <li><Link to="/login">Đăng nhập</Link></li>
                 }

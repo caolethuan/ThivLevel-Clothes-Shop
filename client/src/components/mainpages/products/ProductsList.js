@@ -170,8 +170,8 @@ function ProductsList() {
                                         <td>{product.countInStock}</td>
                                         <td>{
                                             product.countInStock > 0 ?
-                                                <span className="selling">Selling</span> :
-                                                <span className="sold-out">Sold out</span>
+                                                <span className="selling">Đang bán</span> :
+                                                <span className="sold-out">Bán hết</span>
                                         }</td>
                                         <td>
                                             <div className="product-view-detail">
