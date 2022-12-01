@@ -166,7 +166,7 @@ function DetailProduct() {
     if (detailProduct.length === 0) return null
     return (
         <React.Fragment>
-            <section className="product-details mg--40-l-r res-row">
+            <section className="product-details res-row p30-tb-im">
                 <div className="col l-12 m-12 c-12">
                     <div className="res-row">
                         <div className="col l-4 m-6 c-12">

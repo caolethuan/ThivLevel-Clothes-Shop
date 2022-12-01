@@ -79,4 +79,6 @@
 .signin-with-social button {
     justify-content: center;
     width: 100%;
+    border: 2px solid #ddd !important;
+    box-shadow: none !important;
 }
